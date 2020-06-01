@@ -26,12 +26,13 @@ while (inn > 0) do
             endif
 
             if(imode != 0) then
-                ir = inn //fade out
+                ir = (inn - 1)/inumberWin //fade out
                 else
                     ir = 1
                 endif
             //prints("[%d] = %d\n", im + ioverlap, ival)
-            tablew(ival/ir, im + ioverlap, imask)
+            //prints("%.3f\n", ir)
+            tablew(ival * ir, im + ioverlap, imask)
             im += 1
         od
         ioverlap += ilenWin
