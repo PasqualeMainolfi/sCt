@@ -115,7 +115,7 @@ if(ki < itotSample) then
     elseif(ki >= ipoint && ki < iout) then
         //printf("%d\n", 1, kndx) ;skip index
         ai = tablei(kread1, iclip1) * tablei(kndx1, imask)
-        aj = tablei(kread2, iclip2) * tablei(ilenMask - kndx1, imask) //in modo da puntare a indice 0
+        aj = tablei(kread2, iclip2) * tablei(ilenMask - kndx1, imask) //in modo da puntare a indice 0... semplicemente letta al contrario!
         a1 = ai + aj
         elseif(ki >= iout) then
             //printf("%d\n", 1, kndx2) ;skip index
